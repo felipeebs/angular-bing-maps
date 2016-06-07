@@ -12,7 +12,7 @@ function mapUtilsService($q) {
 
     function makeMicrosoftLatLng(location) {
         if (angular.isArray(location)) {
-            return new Microsoft.Maps.Location(location[1], location[0]);
+            return new Microsoft.Maps.Location(location[0], location[1]);
         } else if (location.hasOwnProperty('latitude') && location.hasOwnProperty('longitude')) {
             return new Microsoft.Maps.Location(location.latitude, location.longitude);
         } else if (location.hasOwnProperty('lat') && location.hasOwnProperty('lng')) {
